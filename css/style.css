@@ -27,23 +27,6 @@ button {
     padding-top: 10px;padding-right: 40px;padding-left: 40px;padding-bottom: 10px;
 }
 
-.operator:hover {
-    background-color: rgb(250, 241, 116);
+button:hover {
+    background-color: rgb(203, 212, 255);
 }
-
-.period:hover {
-    background-color: tomato;
-}
-
-.equal:hover {
-    background-color: rgb(250, 241, 116);
-}
-
-.numerator:hover {
-    background-color: tomato;
-}
-
-.clear:hover {
-    background-color: tomato;
-}
-
