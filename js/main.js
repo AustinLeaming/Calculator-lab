@@ -2,27 +2,30 @@
 // declares the calculator class from index.html to represent 'calculator'
 const calculator = document.querySelector('.calculator')
 
-//declares the calculator keys from index.html as 'keys'
+//declares the calculator buttons from index.html as 'keys'
 const keys = document.querySelector('.calculator-keys');
 
 //declares the display/output
 const display = document.getElementById('output');
 
-//puts a click listener on the 'keys' const
+const previousKeyType = calculator.dataset.previousKeyType
+
+//puts a click listener on 'keys'
 keys.addEventListener('click', e => {
     //if the thing clicked matches the 'button' element do the following
     if (e.target.matches('button')) {
         
-        //declares the target button pressed as key
+        //declares the button pressed as key
         const key = e.target;
-        //declares the data set of whatever key as action
+        //declares the operation button
         const action = key.dataset.action;
         //declares the variable keycontent as the text content inside of the button clicked
         const keyContent = key.textContent;
         //declares the text in the output screen
         const displayNum = display.textContent;
 
-        const previousKeyType = calculator.dataset.previousKeyType;
+
+
 
         //if the button DOESNT have a data-action (numbers) do this
         if (!action) {
@@ -33,6 +36,7 @@ keys.addEventListener('click', e => {
             } else {
                 // - make the display text content equal to the display content plus whatever key was pressed
                 display.textContent = displayNum + keyContent;
+                console.log('number key!')
             }
 
         }
@@ -43,6 +47,7 @@ keys.addEventListener('click', e => {
             console.log('operator key!')
             //adds a class to the button if its pressed, changes the color
             key.classList.add('is-depressed');
+            display.textContent = '0';
             calculator.dataset.previousKeyType = 'operator'
             calculator.dataset.firstValue = displayNum;
             calculator.dataset.operator = action;
@@ -78,6 +83,7 @@ keys.addEventListener('click', e => {
             }
 
             return result;
+            displayNum = 0;
         }
 
         //if the button clicked is 'equal' button

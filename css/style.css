@@ -30,3 +30,7 @@ button {
 button:hover {
     background-color: rgb(203, 212, 255);
 }
+
+.is-depressed {
+    background-color: yellow;
+}
