@@ -1,0 +1,49 @@
+.numerator {
+
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(#ffffff, #e598f8);
+    background-position: center;
+}
+
+body {
+    height: 250px;
+    width: 450px;
+    justify-content: center;
+    padding: 5em 0 2em;
+    font-size: 28px;
+    margin: 0 auto;
+    top: 100px;
+}
+
+button {
+    font-size: x-large;
+    background-color: transparent;
+    border-radius: 20%;
+    font-family: 'Abril Fatface', cursive;
+    margin: 20px 5px;
+    padding-top: 10px;padding-right: 40px;padding-left: 40px;padding-bottom: 10px;
+}
+
+.operator:hover {
+    background-color: rgb(250, 241, 116);
+}
+
+.period:hover {
+    background-color: tomato;
+}
+
+.equal:hover {
+    background-color: rgb(250, 241, 116);
+}
+
+.numerator:hover {
+    background-color: tomato;
+}
+
+.clear:hover {
+    background-color: tomato;
+}
+
